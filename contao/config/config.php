@@ -9,4 +9,4 @@
  */
 
 
-$GLOBALS['ISO_HOOKS']['generateProduct'][] = array('Isotope\Model\RelatedVariants', 'getRelatedProducts');
+$GLOBALS['ISO_HOOKS']['generateProduct'][] = array('Isotope\Model\Product\RelatedVariants', 'getRelatedProducts');
