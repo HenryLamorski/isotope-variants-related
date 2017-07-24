@@ -64,7 +64,7 @@ class RelatedVariants
             $arrConfig = array(
                 'module'        => $objTemplate->config['module'],
                 'template'      => $objTemplate->config['module']->iso_list_layout ?: $type->list_template,
-                'gallery'       => $objTemplate->config['module']->iso_gallery ?: $type->list_gallery,
+                'gallery'       => $objTemplate->config['module']->iso_related_gallery ?: $type->list_gallery,
                 'buttons'       => $objTemplate->config['module']->iso_buttons,
                 'useQuantity'   => $objTemplate->config['module']->iso_use_quantity,
                 'jumpTo'        => $objTemplate->config['module']->findJumpToPage($objProduct),
