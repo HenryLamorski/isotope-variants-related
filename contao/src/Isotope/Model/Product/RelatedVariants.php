@@ -52,6 +52,11 @@ class RelatedVariants
 		$columns = [Product::getTable() . '.id IN (' . implode(',', array_map('intval', $productIds)) . ')'];
         $options = ['order' => \Database::getInstance()->findInSet(Product::getTable() . '.id', $productIds)];
 		$objProducts = Product::findAvailableBy($columns, [], $options);
+		
+		if(!$objProducts) {
+			return;
+		}
+		
 		$arrProducts = $objProducts->getModels();
 		
         $arrBuffer         = array();
